@@ -1,14 +1,13 @@
 import openai
 
 # Set OpenAI API key
-openai.api_key = "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"
+openai.api_key = "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"
 
 # Define the BUILD/RELEASE scenario prompt
-prompt = """Generate a Jenkins pipeline script for the following BUILD/RELEASE scenario:
-
-- A developer pushes code to the main branch of a GitHub repository.
+prompt = """Generate a Jenkins pipeline script with groovy code written for each step for the following BUILD/RELEASE scenario:
+- A developer pushes code to the main branch of a GitHub repository https://github.com/gauravjakhar/TerraformBot.
 - Jenkins should automatically run tests and build the application.
-- If the tests pass, Jenkins should deploy the application to a test environment.
+- If the tests pass, Jenkins should deploy the application to a test environment which is based on Kubernetes Helm charts.
 - If the deployment to the test environment is successful, Jenkins should deploy the application to a production environment."""
 
 # Define the Jenkinsfile name
